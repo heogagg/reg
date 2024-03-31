@@ -1,6 +1,6 @@
-<?php
+<script lang="php">
     session_start();
-?>
+</script>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -24,13 +24,14 @@
         <a href="register.php">Зарегестрируйтесь</a>!
     </p>
 
-        <?php
-        if (isset($_SESSION['message']))
+        <script lang="php">
+           if (isset($_SESSION['message']))
         {
-            echo '<p class="msg"> '. $_SESSION['message'] . ' </p>';
+            print($_SESSION['message'])
         }
-        unset($_SESSION['message']);
-        ?>
+        unset($_SESSION['message']); 
+        </script>
+        
 
 </form>
 
