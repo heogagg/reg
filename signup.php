@@ -15,9 +15,9 @@ if ($password === $password_again) {
 
     mysqli_query($connect, "INSERT INTO `registration` (`id_user`, `Login`, `Password`, `PasswordAgain`, `Email`) VALUES (NULL, '$login', '$password', ' $password_again', '$email')");
     $_SESSION['message'] = 'Регистрация произошла успешно';
-    header('location: index.php');
+    header('location: index.html');
 
 } else {
      $_SESSION['message'] = 'Пароли не совпадают';
-     header('Location: register.php'); }
+     header('Location: register.html'); }
 
