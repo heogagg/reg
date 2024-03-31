@@ -1,6 +1,6 @@
-<?php
+<script lang="php">
     session_start();
-?>
+</script>
 
 
 <!DOCTYPE html>
@@ -28,14 +28,13 @@
         Уже есть аккаунт?
         <a href="index.php">Авторизируйтесь</a>!
     </p>
-    <?php
+    <script lang="php">
         if (isset($_SESSION['message']))
         {
-            echo '<p class="msg"> '. $_SESSION['message'] . ' </p>';
+            print($_SESSION['message']);
         }
         unset($_SESSION['message']);
-    ?>
-
+    </script>
 </form>
 
 </body>
